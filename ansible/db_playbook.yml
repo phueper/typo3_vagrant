@@ -34,6 +34,11 @@
       mysql_user: name={{ db_user }} password={{ db_pwd }} host=localhost priv={{ db_name }}.*:ALL state=present login_user={{ db_admin_user }} login_password={{ db_admin_pwd }}
     - name: user@%
       mysql_user: name={{ db_user }} password={{ db_pwd }} host="%" priv={{ db_name }}.*:ALL state=present login_user={{ db_admin_user }} login_password={{ db_admin_pwd }}
+    - name: unzip import
+      shell: gunzip --stdout --keep /vagrant/ansible/mysql/typo3.sql.gz > /tmp/mysql_data.sql
+    - name: import data
+      mysql_db: name=typo3 state=import login_user={{ db_admin_user }} login_password={{ db_admin_pwd }} target=/tmp/mysql_data.sql
+
 
   handlers:
 
