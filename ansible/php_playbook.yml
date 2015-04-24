@@ -1,5 +1,8 @@
 ---
 - name: playbook for php/apache setup
+# TODO: php einstellungen aus https://github.com/TYPO3/TYPO3.CMS/blob/TYPO3_6-2/INSTALL.md setzen!
+# TODO: php extensions aus https://github.com/TYPO3/TYPO3.CMS/blob/TYPO3_6-2/INSTALL.md installieren
+# TODO: apache mod_expires anmachen (https://github.com/TYPO3/TYPO3.CMS/blob/TYPO3_6-2/INSTALL.md)
   hosts: all
   remote_user: vagrant
   sudo: yes

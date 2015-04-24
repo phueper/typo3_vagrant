@@ -17,8 +17,6 @@
 - include: swap_playbook.yml
 - include: db_playbook.yml
 - include: php_playbook.yml
-- include: frontend_playbook.yml
 - include: vagrant_playbook.yml
-- include: app_playbook.yml
 
 
