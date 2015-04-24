@@ -1,1 +1,1 @@
-../typo3_src/index.php
+typo3_src/index.php
